@@ -13,7 +13,7 @@ export const paginationLogic  = (currentPage, pokemonFilters ) => {
     const actualBlock = Math.ceil(currentPage / pagesPerBlock)
 
     const pagesInBlock = []
-    const minPage = (actualBlock * pagesPerBlock - pagesPerBlock)
+    const minPage = (actualBlock * pagesPerBlock - pagesPerBlock) + 1
     const maxPage = actualBlock * pagesPerBlock
     for (let i = minPage; i <= maxPage; i++){
         if (i  <= lastPage){
